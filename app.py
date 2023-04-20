@@ -10,7 +10,7 @@ df2 = pd.read_csv('./model/tmdb.csv')
 count = CountVectorizer(stop_words='english')
 count_matrix = count.fit_transform(df2['soup'])
 
-cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
+
 
 df2 = df2.reset_index()
 indices = pd.Series(df2.index, index=df2['title'])
